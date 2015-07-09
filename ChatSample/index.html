@@ -36,6 +36,8 @@
             $.connection.hub.url = "/signalr";
             var chat = $.connection.chatHub;
 
+            $.connection.hub.start(); //open
+
             chat.client.addMessage = function (message) {
                 $('#messages').append($('<li>').text(message));
             };
